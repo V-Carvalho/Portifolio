@@ -17,7 +17,7 @@ import Sidemenu from "./components/Sidemenu/Sidemenu";
 import {ThemeContext} from "../src/contexts/ThemeContext";
 
 function App() {
-  const {theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <ThemeProvider theme={theme == "darkTheme" ? darkTheme : lightTheme}>
