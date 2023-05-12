@@ -25,7 +25,6 @@ function App() {
         <GlobalStyle />
         <Sidebar />
         <Sidemenu />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/overview" element={<Overview />} />
