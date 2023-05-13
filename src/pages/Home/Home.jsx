@@ -1,9 +1,5 @@
-import { useContext } from "react";
-
 import styled from "styled-components";
-
 import Header from "../../components/Header/Header";
-import {ThemeContext} from "../../contexts/ThemeContext";
 
 const Main = styled.main`
   flex: 4; // mudar p/ 1
@@ -15,15 +11,10 @@ const Main = styled.main`
 `;
 
 const Home = () => {
-
-  const {theme, toggleTheme} = useContext(ThemeContext)
-
   return (
     <Main>
       <Header />
-      <h1>Home - {theme}</h1>
-      <button onClick={toggleTheme}>Toggle</button>
-
+      <h1>Home</h1>
     </Main>
   );
 };
