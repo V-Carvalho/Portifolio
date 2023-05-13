@@ -9,9 +9,9 @@ const StyledSidemenu = styled.aside`
   width: 220px;
   display: flex;
   height: 100vh;
+  padding: 0px 4px;
   align-items: center;
   flex-direction: column;
-  padding: 0px 0px 0px 10px;
   border-right: thin solid ${(props) => props.borderColor};
 `;
 
@@ -41,7 +41,6 @@ const HeaderFolder = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.backgroundColor};
-
 `;
 
 const TitleFolder = styled.p`
