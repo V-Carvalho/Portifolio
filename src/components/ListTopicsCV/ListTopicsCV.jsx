@@ -17,6 +17,7 @@ const Tab = styled.li`
   justify-content: center;
   opacity: ${(props) => props.opacity};
   min-height: ${(props) => props.heightTab};
+  background-color: ${(props) => props.backgroundColor};
   border-right: thin solid ${(props) => props.borderColorTab};
   border-bottom: thin solid ${(props) => props.borderColorTab};
 `;
@@ -25,12 +26,18 @@ const TabName = styled.p`
   /* font-size:  */
   display: flex;
   cursor: pointer;
+  margin: 0px 5px;
   color: ${(props) => props.textColor};
 `;
 
-const TabIcon = styled.div`
+const TabIconLeft = styled.div`
   display: flex;
-  margin: 0px 5px;
+  margin: 0px 0px 0px 5px;
+`;
+
+const TabIconRight = styled.div`
+  display: flex;
+  margin: 0px 5px 0px 0px;
 `;
 
 const ListTopicsCV = ({ showBtnClose, heightTab, borderColorTab, alignItemsTab, flexDirectionTab }) => {
@@ -71,16 +78,16 @@ const ListTopicsCV = ({ showBtnClose, heightTab, borderColorTab, alignItemsTab, 
           <Tab
             heightTab={heightTab}
             borderColorTab={!borderColorTab ? theme.borderColor : borderColorTab}
-            opacity={tab.path === pageLocation.pathname ? "01" : "0.5"}
+            backgroundColor={tab.path === pageLocation.pathname ? theme.secondaryColor : ""}
           >
-            <TabIcon>
+            <TabIconLeft>
               <BsFillMarkdownFill size={15} color={theme.iconSecondaryColor} />
-            </TabIcon>
+            </TabIconLeft>
 
             <TabName textColor={theme.textColor}>{tab.name}</TabName>
 
             {showBtnClose ? (
-              <TabIcon>
+              <TabIconRight>
                 {tab.path === pageLocation.pathname ? (
                   <VscClose
                     size={15}
@@ -90,7 +97,7 @@ const ListTopicsCV = ({ showBtnClose, heightTab, borderColorTab, alignItemsTab, 
                 ) : (
                   ""
                 )}
-              </TabIcon>
+              </TabIconRight>
             ) : (
               ""
             )}
