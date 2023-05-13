@@ -36,10 +36,12 @@ const ContainerFolder = styled.div`
 const HeaderFolder = styled.div`
   width: 100%;
   display: flex;
+  margin-bottom: 5px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.backgroundColor};
+
 `;
 
 const TitleFolder = styled.p`
