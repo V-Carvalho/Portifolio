@@ -14,13 +14,13 @@ import Certificates from "./pages/Certificates/Certificates";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Sidemenu from "./components/Sidemenu/Sidemenu";
 
-import {ThemeContext} from "../src/contexts/ThemeContext";
+import { ThemeContext } from "../src/contexts/ThemeContext";
 
 function App() {
   const { isDarkTheme } = useContext(ThemeContext);
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    <ThemeProvider theme={ isDarkTheme ? darkTheme : lightTheme }>
       <BrowserRouter>
         <GlobalStyle />
         <Sidebar />
