@@ -17,10 +17,10 @@ import Sidemenu from "./components/Sidemenu/Sidemenu";
 import {ThemeContext} from "../src/contexts/ThemeContext";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
+  const { isDarkTheme } = useContext(ThemeContext);
 
   return (
-    <ThemeProvider theme={theme == "darkTheme" ? darkTheme : lightTheme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <BrowserRouter>
         <GlobalStyle />
         <Sidebar />
