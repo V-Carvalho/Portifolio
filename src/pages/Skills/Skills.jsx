@@ -1,23 +1,37 @@
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import Header from "../../components/Header/Header";
 
 const Main = styled.main`
   flex: 3; // mudar p/ 1
-  display: flex;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ContentMain = styled.section`
+  display: flex;
+  height: 100%;  
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+  background-color: ${(props) => props.backgroundColor};
 
-  color:whitesmoke;
+  color: whitesmoke;
 `;
 
 const Skills = () => {
+  const theme = useTheme();
+
   return (
-    <Main>
+    <Main >
       <Header />
-      <h1>Skills</h1>
+      <ContentMain backgroundColor={theme.secondaryColor}>
+        <h1 color={theme.textColor}>Skills</h1>
+      </ContentMain>
     </Main>
   );
 };
 
 export default Skills;
+
+
