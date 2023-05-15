@@ -80,7 +80,7 @@ const Sidemenu = () => {
 
   return (
     <StyledSidemenu borderColor={theme.borderColor}>
-      <TitleSidemenu titleColor={theme.titleColor}>{"Explorador"}</TitleSidemenu>
+      <TitleSidemenu titleColor={theme.textColor}>{"Explorador"}</TitleSidemenu>
 
       <ContainerFolder>
         <HeaderFolder backgroundColor={theme.secondaryColor} onClick={closeFolder}>
