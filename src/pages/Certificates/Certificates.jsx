@@ -1,32 +1,50 @@
 import styled, { useTheme } from "styled-components";
+import { certificates } from "../../utils/DataCV";
+
 import Header from "../../components/Header/Header";
+import TitlePage from "../../components/TitlePage/TitlePage";
+import Topic from "../../components/Topic/Topic";
 
 const Main = styled.main`
-  flex: 3; // mudar p/ 1
+  flex: 1;
   height: 100vh;
   display: flex;
   flex-direction: column;
 `;
 
 const ContentMain = styled.section`
+  height: 100%;
   display: flex;
-  height: 100%;  
+  overflow-y: auto;
+  padding: 0px 50px;
+  overflow-x: hidden;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   background-color: ${(props) => props.backgroundColor};
-
-  color: whitesmoke;
-`; 
+`;
 
 const Certificates = () => {
   const theme = useTheme();
 
   return (
-    <Main >
+    <Main>
       <Header />
-      <ContentMain backgroundColor={theme.secondaryColor}>
-        <h1 color={theme.textColor}>Certificates</h1>
+      <ContentMain backgroundColor={theme.primaryColor}>
+        {certificates.map((certificate) => (
+          <>
+            <TitlePage
+              title={certificate.title}
+              textColor={theme.textColor}
+              borderColor={theme.fixedColor}
+              iconColor={theme.iconPrimaryColor}
+            />
+            <Topic
+              topics={certificate.topics}
+              textColor={theme.textColor}
+              backgroundColor={theme.fixedColor}
+            />
+          </>
+        ))}
       </ContentMain>
     </Main>
   );
