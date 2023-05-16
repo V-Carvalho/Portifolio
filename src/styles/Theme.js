@@ -5,6 +5,7 @@ export const darkTheme = {
   secondaryColor: "#343434",
   iconPrimaryColor: "#E8E8E8",
   iconSecondaryColor: "#6997D5",
+  fixedColor: "#6997D5",
 }
 
 export const lightTheme = {
@@ -14,5 +15,6 @@ export const lightTheme = {
   secondaryColor: "#BBBBBB",
   iconPrimaryColor: "#1E1E1E",
   iconSecondaryColor: "#6997D5",
+  fixedColor: "#6997D5",
 }
 
