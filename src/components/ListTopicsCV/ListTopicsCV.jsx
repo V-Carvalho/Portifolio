@@ -46,24 +46,24 @@ const ListTopicsCV = ({ showBtnClose, heightTab, borderColorTab, alignItemsTab, 
 
   const tabs = [
     {
-      name: "Overview.md",
-      path: "/overview",
+      name: "SobreMim.md",
+      path: "/aboutMe",
     },
     {
-      name: "Skills.md",
+      name: "Formação.md",
+      path: "/formations",
+    },
+    {
+      name: "Habilidades.md",
       path: "/skills",
-    },
+    },    
     {
-      name: "Experience.md",
-      path: "/experience",
-    },
-    {
-      name: "Education.md",
-      path: "/education",
-    },
-    {
-      name: "Certificates.md",
+      name: "Certificados.md",
       path: "/certificates",
+    },
+    {
+      name: "Projetos.md",
+      path: "/projects",
     },
   ];
 
