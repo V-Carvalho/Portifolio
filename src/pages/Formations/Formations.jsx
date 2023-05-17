@@ -25,18 +25,19 @@ const ContentMain = styled.section`
 
 const Formations = () => {
   const theme = useTheme();
+  const data = formations();
 
   return (
     <Main>
       <Header />
       <ContentMain backgroundColor={theme.primaryColor}>
-        {formations.map((formation) => (
+        {data.map((formation) => (
           <>
             <TitlePage
               title={formation.title}
               textColor={theme.textColor}
               borderColor={theme.fixedColor}
-              iconColor={theme.iconPrimaryColor}
+              icon={formation.icon}
             />
             <Topic
               topics={formation.topics}

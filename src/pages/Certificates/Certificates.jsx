@@ -25,18 +25,19 @@ const ContentMain = styled.section`
 
 const Certificates = () => {
   const theme = useTheme();
+  const data = certificates();
 
   return (
     <Main>
       <Header />
       <ContentMain backgroundColor={theme.primaryColor}>
-        {certificates.map((certificate) => (
+        {data.map((certificate) => (
           <>
             <TitlePage
               title={certificate.title}
               textColor={theme.textColor}
               borderColor={theme.fixedColor}
-              iconColor={theme.iconPrimaryColor}
+              icon={certificate.icon}
             />
             <Topic
               topics={certificate.topics}

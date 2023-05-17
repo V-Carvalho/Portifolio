@@ -25,18 +25,19 @@ const ContentMain = styled.section`
 
 const Projects = () => {
   const theme = useTheme();
+  const data = projects();
 
   return (
     <Main>
       <Header />
       <ContentMain backgroundColor={theme.primaryColor}>
-        {projects.map((project) => (
+        {data.map((project) => (
           <>
             <TitlePage
               title={project.title}
               textColor={theme.textColor}
               borderColor={theme.fixedColor}
-              iconColor={theme.iconPrimaryColor}
+              icon={project.icon}
             />
             <Topic
               topics={project.topics}

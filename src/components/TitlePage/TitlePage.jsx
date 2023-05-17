@@ -19,10 +19,10 @@ const Title = styled.h1`
   color: ${(props) => props.textColor};
 `;
 
-const TitleTopic = ({ title, textColor, borderColor, icon, iconColor }) => {
+const TitleTopic = ({ title, textColor, borderColor, icon }) => {
   return (
     <ContainerTitle borderColor={borderColor}>
-      <FaMedal size={25} color={iconColor} />
+      {icon}
       <Title textColor={textColor}>{title}</Title>
     </ContainerTitle>
   );

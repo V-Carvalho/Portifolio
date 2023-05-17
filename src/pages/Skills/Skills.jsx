@@ -25,18 +25,19 @@ const ContentMain = styled.section`
 
 const Skills = () => {
   const theme = useTheme();
+  const data = skills();
 
   return (
     <Main>
       <Header />
       <ContentMain backgroundColor={theme.primaryColor}>
-        {skills.map((skill) => (
+        {data.map((skill) => (
           <>
             <TitlePage
               title={skill.title}
               textColor={theme.textColor}
               borderColor={theme.fixedColor}
-              iconColor={theme.iconPrimaryColor}
+              icon={skill.icon}
             />
             <Topic
               topics={skill.topics}
