@@ -41,7 +41,9 @@ const Certificates = () => {
             <Topic
               topics={certificate.topics}
               textColor={theme.textColor}
-              backgroundColor={theme.fixedColor}
+              iconColor={theme.iconPrimaryColor}
+              borderColor={theme.borderColor}
+              backgroundColorDate={theme.fixedColor}
             />
           </>
         ))}
