@@ -4,6 +4,7 @@ import { formations } from "../../utils/DataCV";
 import Header from "../../components/Header/Header";
 import TitlePage from "../../components/TitlePage/TitlePage";
 import Topic from "../../components/Topic/Topic";
+import Footer from "../../components/Footer/Footer";
 
 const Main = styled.main`
   flex: 1;
@@ -15,12 +16,28 @@ const Main = styled.main`
 const ContentMain = styled.section`
   height: 100%;
   display: flex;
-  overflow-y: auto;  
+  overflow-y: auto;
   padding: 0px 50px;
   overflow-x: hidden;
+  margin-bottom: 20px;
   align-items: center;
   flex-direction: column;
   background-color: ${(props) => props.backgroundColor};
+
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    -webkit-border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: ${(props) => props.scrollbarColor};
+  }
 `;
 
 const Formations = () => {
@@ -30,7 +47,10 @@ const Formations = () => {
   return (
     <Main>
       <Header />
-      <ContentMain backgroundColor={theme.primaryColor}>
+      <ContentMain
+        backgroundColor={theme.secondaryColor}
+        scrollbarColor={theme.primaryColor}
+      >
         {data.map((formation) => (
           <>
             <TitlePage
@@ -49,6 +69,7 @@ const Formations = () => {
           </>
         ))}
       </ContentMain>
+      <Footer />
     </Main>
   );
 };

@@ -7,11 +7,13 @@ import Icon from "../../components/Icon/Icon";
 
 const StyledSidebar = styled.aside`
   display: flex;
-  height: 100vh;
   min-width: 50px;
   padding: 25px 2px;
+  margin-bottom: 20px;
   flex-direction: column;
+  height: calc(100vh -30px);
   border-right: thin solid ${(props) => props.borderColor};
+
 `;
 
 const BodySidebar = styled.div`

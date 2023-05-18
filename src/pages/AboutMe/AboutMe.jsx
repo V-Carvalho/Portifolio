@@ -4,6 +4,7 @@ import { aboutMe } from "../../utils/DataCV";
 import Header from "../../components/Header/Header";
 import TitlePage from "../../components/TitlePage/TitlePage";
 import Topic from "../../components/Topic/Topic";
+import Footer from "../../components/Footer/Footer";
 
 const Main = styled.main`
   flex: 1;
@@ -18,9 +19,24 @@ const ContentMain = styled.section`
   overflow-y: auto;
   padding: 0px 50px;
   overflow-x: hidden;
+  margin-bottom: 20px;
   align-items: center;
   flex-direction: column;
   background-color: ${(props) => props.backgroundColor};
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    -webkit-border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: ${(props) => props.scrollbarColor};
+  }
 `;
 
 const AboutMe = () => {
@@ -30,7 +46,10 @@ const AboutMe = () => {
   return (
     <Main>
       <Header />
-      <ContentMain backgroundColor={theme.primaryColor}>
+      <ContentMain
+        backgroundColor={theme.secondaryColor}
+        scrollbarColor={theme.primaryColor}
+      >
         {data.map((about) => (
           <>
             <TitlePage
@@ -49,14 +68,9 @@ const AboutMe = () => {
           </>
         ))}
       </ContentMain>
+      <Footer />
     </Main>
   );
 };
 
 export default AboutMe;
-
-
-
-
-
-

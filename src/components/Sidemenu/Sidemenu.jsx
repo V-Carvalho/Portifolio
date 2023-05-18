@@ -8,11 +8,13 @@ import ListTopicsCV from "../ListTopicsCV/ListTopicsCV";
 const StyledSidemenu = styled.aside`
   width: 220px;
   display: flex;
-  height: 100vh;
   padding: 0px 4px;
+  margin-bottom: 20px;
   align-items: center;
   flex-direction: column;
+  height: calc(100vh - 30px);
   border-right: thin solid ${(props) => props.borderColor};
+  
 `;
 
 const TitleSidemenu = styled.p`
