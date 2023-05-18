@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { linksSidebar } from "../../utils/Links"
 import styled, { useTheme } from "styled-components";
+
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { SidemenuContext } from "../../contexts/SidemenuContext";
 
 import Icon from "../../components/Icon/Icon";
 
@@ -13,7 +15,6 @@ const StyledSidebar = styled.aside`
   flex-direction: column;
   height: calc(100vh -30px);
   border-right: thin solid ${(props) => props.borderColor};
-
 `;
 
 const BodySidebar = styled.div`
@@ -34,6 +35,7 @@ const Sidebar = () => {
   const theme = useTheme();  
   const links = linksSidebar();
   const { toggleTheme } = useContext(ThemeContext); 
+  const { closeSidemenu } = useContext(SidemenuContext);
 
   return (
     <StyledSidebar borderColor={theme.borderColor}>
@@ -46,6 +48,7 @@ const Sidebar = () => {
             title={link.title}
             icon={link.icon}
             opacity={0.5}
+            onClick={link.title == "Arquivos" ? closeSidemenu : null}
           />
         ))}
       </BodySidebar>

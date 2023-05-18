@@ -15,16 +15,19 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Sidemenu from "./components/Sidemenu/Sidemenu";
 
 import { ThemeContext } from "../src/contexts/ThemeContext";
+import { SidemenuProvider } from "./contexts/SidemenuContext";
 
 function App() {
   const { isDarkTheme } = useContext(ThemeContext);
 
   return (
-    <ThemeProvider theme={ isDarkTheme ? darkTheme : lightTheme }>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <BrowserRouter>
         <GlobalStyle />
-        <Sidebar />
-        <Sidemenu />
+        <SidemenuProvider>
+          <Sidebar />
+          <Sidemenu />
+        </SidemenuProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutMe" element={<AboutMe />} />

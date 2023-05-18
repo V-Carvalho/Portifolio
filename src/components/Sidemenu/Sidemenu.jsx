@@ -1,20 +1,21 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import styled, { useTheme }  from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { VscChevronDown, VscChevronRight } from "react-icons/vsc";
 
 import ListTopicsCV from "../ListTopicsCV/ListTopicsCV";
 
+import { SidemenuContext } from "../../contexts/SidemenuContext";
+
 const StyledSidemenu = styled.aside`
   width: 220px;
-  display: flex;
   padding: 0px 4px;
   margin-bottom: 20px;
   align-items: center;
   flex-direction: column;
   height: calc(100vh - 30px);
+  display: ${(props) => props.display};
   border-right: thin solid ${(props) => props.borderColor};
-  
 `;
 
 const TitleSidemenu = styled.p`
@@ -50,7 +51,7 @@ const TitleFolder = styled.p`
   width: 100%;
   display: flex;
   cursor: pointer;
-  color: ${(props) => props.textColor};  
+  color: ${(props) => props.textColor};
 `;
 
 const IconTitleFolder = styled.div`
@@ -64,28 +65,30 @@ const ContentFolder = styled.div`
 `;
 
 const Sidemenu = () => {
-  const theme = useTheme()
+  const theme = useTheme();
   const navigate = useNavigate();
+  const { sideMenuIsOpen } = useContext(SidemenuContext);
 
   const [folderIsOpen, setFolderIsOpen] = useState(true);
 
   const closeFolder = (event) => {
-    event.preventDefault();
     navigate("/");
-
-    if (folderIsOpen == true) {
-      setFolderIsOpen(false);
-    } else {
-      setFolderIsOpen(true);
-    }
+    event.preventDefault();
+    setFolderIsOpen(folderIsOpen ? false : true);
   };
 
   return (
-    <StyledSidemenu borderColor={theme.borderColor}>
+    <StyledSidemenu
+      display={sideMenuIsOpen ? "flex" : "none"}
+      borderColor={theme.borderColor}
+    >
       <TitleSidemenu titleColor={theme.textColor}>{"Explorador"}</TitleSidemenu>
 
       <ContainerFolder>
-        <HeaderFolder backgroundColor={theme.secondaryColor} onClick={closeFolder}>
+        <HeaderFolder
+          backgroundColor={theme.secondaryColor}
+          onClick={closeFolder}
+        >
           <IconTitleFolder>
             {folderIsOpen ? (
               <VscChevronDown size={20} color={theme.iconPrimaryColor} />
@@ -96,13 +99,11 @@ const Sidemenu = () => {
           <TitleFolder textColor={theme.textColor}>{"Home"}</TitleFolder>
         </HeaderFolder>
 
-        <ContentFolder
-          displayContentFolder={folderIsOpen ? "flex" : "none"}
-        >
+        <ContentFolder displayContentFolder={folderIsOpen ? "flex" : "none"}>
           <ListTopicsCV
             showBtnClose={false}
             heightTab="30px"
-            borderColorTab="none"            
+            borderColorTab="none"
             alignItemsTab="flex-start"
             flexDirectionTab="column"
           />
