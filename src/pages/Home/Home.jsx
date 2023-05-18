@@ -4,7 +4,7 @@ import { linksHome } from "../../utils/Links"
 import Header from "../../components/Header/Header";
 import Icon from "../../components/Icon/Icon";
 import profilePicture from '../../assets/images/profile.png';
-
+import Footer from "../../components/Footer/Footer";
 
 const Main = styled.main`
   flex: 1;
@@ -20,9 +20,26 @@ const ContentMain = styled.section`
   overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
+  margin-bottom: 20px;
   flex-direction: row;
   justify-content: center;
   background-color: ${(props) => props.backgroundColor};
+
+
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    -webkit-border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: ${(props) => props.scrollbarColor};
+  }
 `;
 
 const ContainerPersonalData = styled.div`
@@ -96,6 +113,7 @@ const Home = () => {
           />
         </ContainerPersonalPhoto>
       </ContentMain>
+      <Footer />
     </Main>
   );
 };
