@@ -47,7 +47,7 @@ export const formations = () => {
           details: ["Universidade de Mogi das Cruzes"],
         },
         {
-          index: 4,
+          index: 1,
           title: "• Fundamentos do Suporte Técnico",
           conclusionYear: "2022",
           urlCover: "",
@@ -56,7 +56,7 @@ export const formations = () => {
           details: ["Google"],
         },
         {
-          index: 1,
+          index: 2,
           title: "• Formação HTML E CSS",
           conclusionYear: "2022",
           urlCover: "",
@@ -65,7 +65,7 @@ export const formations = () => {
           details: ["Alura"],
         },
         {
-          index: 4,
+          index: 3,
           title: "• Formação em Inovação & Gestão",
           conclusionYear: "2023",
           urlCover: "",
@@ -83,7 +83,7 @@ export const formations = () => {
           details: ["Alura"],
         },
         {
-          index: 2,
+          index: 5,
           title: "• Formação em Front End",
           conclusionYear: "2023",
           urlCover: "",
@@ -92,7 +92,7 @@ export const formations = () => {
           details: ["Alura"],
         },
         {
-          index: 3,
+          index: 6,
           title: "• Formação React",
           conclusionYear: "2023",
           urlCover: "",
@@ -132,9 +132,8 @@ export const skills = () => {
           urlDeploy: "",
           details: ["Material UI", "Tailwind CSS", "Styled-Components"],
         },
-
         {
-          index: 3,
+          index: 2,
           title: "• JavaScript",
           conclusionYear: "",
           urlCover: "",
@@ -143,7 +142,7 @@ export const skills = () => {
           details: ["Vue.js", "React.js", "TypeScript", "Node.js / Express.js"],
         },
         {
-          index: 4,
+          index: 3,
           title: "• Cloud Computing",
           conclusionYear: "",
           urlCover: "",
@@ -152,7 +151,7 @@ export const skills = () => {
           details: ["AWS", "Azure", "Vercel", "Netlify"],
         },
         {
-          index: 6,
+          index: 4,
           title: "• Banco de dados",
           conclusionYear: "",
           urlCover: "",
@@ -161,7 +160,7 @@ export const skills = () => {
           details: ["MySQL", "SQLite", "Firebase", "MongoDB"],
         },
         {
-          index: 2,
+          index: 5,
           title: "• GIT",
           conclusionYear: "",
           urlCover: "",
@@ -229,9 +228,8 @@ export const projects = () => {
           urlDeploy: "",
           details: [],
         },
-
         {
-          index: 0,
+          index: 1,
           title: "• Alura Flix",
           conclusionYear: "",
           urlCover:
@@ -241,7 +239,7 @@ export const projects = () => {
           details: ["Plataforma de Streaming"],
         },
         {
-          index: 0,
+          index: 2,
           title: "• Decodificador",
           conclusionYear: "",
           urlCover:
@@ -251,7 +249,7 @@ export const projects = () => {
           details: ["Codificador/Decodificador de Texto"],
         },
         {
-          index: 0,
+          index: 3,
           title: "• Organo",
           conclusionYear: "",
           urlCover:
@@ -260,9 +258,8 @@ export const projects = () => {
           urlDeploy: "https://organo.up.railway.app/",
           details: ["Gerenciamento de Equipes"],
         },
-
         {
-          index: 0,
+          index: 4,
           title: "• See Monitoramento",
           conclusionYear: "",
           urlCover:
