@@ -8,7 +8,7 @@ const ContainerTopic = styled.div`
   padding-bottom: 4px;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px 0px 0px 40px;
+  margin: 20px 40px 0px 40px;
 `;
 
 const ContainerTitle = styled.div`
@@ -35,14 +35,13 @@ const Title = styled.p`
 `;
 
 const ContainerItems = styled.div`
-  flex: 0;
+  flex: 1;
   gap: 5px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 5px 0px 0px 15px;
+  margin: 0px 0px 0px 10px;
 `;
 
 const Item = styled.p`
@@ -54,7 +53,7 @@ const CardProject = styled.div`
   gap: 5px;
   display: flex;
   flex-direction: column;
-  margin: 5px 0px 0px 15px;
+  margin: 5px 0px 0px 10px;
 `;
 
 const ImgProject = styled.img`
