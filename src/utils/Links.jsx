@@ -63,7 +63,7 @@ export const linksSidebar = () => {
     [
       {
         index: 0,
-        title: "",
+        title: "Arquivos",
         url: "",
         target: "",
         icon: <VscFiles size={25} color={theme.iconPrimaryColor} />,
