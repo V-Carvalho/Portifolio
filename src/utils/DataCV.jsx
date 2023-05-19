@@ -220,16 +220,36 @@ export const projects = () => {
       topics: [
         {
           index: 0,
+          title: "• Blog Pessoal",
+          conclusionYear: "",
+          urlCover:
+            "https://user-images.githubusercontent.com/34304319/239554005-bd68b05a-ad7c-4257-8bfd-95ee99691530.png",
+          urlRepository: "https://github.com/V-Carvalho/Blog-Pessoal",
+          urlDeploy: "https://eu-blogueiro.netlify.app/",
+          details: ["Eu Blogueiro!"],
+        },        
+        {
+          index: 1,
           title: "• Apeperia",
           conclusionYear: "",
           urlCover:
-            "https://netopaiva.github.io/challenge-portfolio/assets/imagens/tela_apeperia.png",
-          urlRepository: "",
-          urlDeploy: "",
-          details: [],
+            "https://user-images.githubusercontent.com/34304319/239532442-04088c10-99d5-4423-a877-6e634e434c91.png",
+          urlRepository: "https://github.com/V-Carvalho/Apeperia",
+          urlDeploy: "https://my-apeperia.netlify.app/",
+          details: ["Landing Page"],
         },
         {
-          index: 1,
+          index: 2,
+          title: "• Fruta e Fruto",
+          conclusionYear: "",
+          urlCover:
+            "https://user-images.githubusercontent.com/34304319/239520580-84fb7dc1-b4f8-460e-8733-911fa01a91d9.png",
+          urlRepository: "https://github.com/V-Carvalho/Fruta-E-Fruto",
+          urlDeploy: "https://fruit-and-fruit.netlify.app/",
+          details: ["Receitas para economizar e ganhar saúde!"],
+        },
+        {
+          index: 3,
           title: "• Alura Flix",
           conclusionYear: "",
           urlCover:
@@ -239,7 +259,7 @@ export const projects = () => {
           details: ["Plataforma de Streaming"],
         },
         {
-          index: 2,
+          index: 4,
           title: "• Decodificador",
           conclusionYear: "",
           urlCover:
@@ -249,17 +269,27 @@ export const projects = () => {
           details: ["Codificador/Decodificador de Texto"],
         },
         {
-          index: 3,
+          index: 5,
+          title: "• Jogo da Memória",
+          conclusionYear: "",
+          urlCover:
+            "https://user-images.githubusercontent.com/34304319/239390325-12b8eef5-543e-4364-bea1-2dc1b80c1600.png",
+          urlRepository: "https://github.com/V-Carvalho/Jogo-Da-Memoria",
+          urlDeploy: "https://memory-game-rick-morty.netlify.app/",
+          details: ["Game Cards"],
+        },
+        {
+          index: 6,
           title: "• Organo",
           conclusionYear: "",
           urlCover:
-            "https://user-images.githubusercontent.com/34304319/231551276-364871aa-52c6-4ccc-b790-4fda5e685397.gif",
+            "https://user-images.githubusercontent.com/34304319/239330166-4b790792-ccec-4c9c-8a9e-7231f6d5e42e.png",
           urlRepository: "https://github.com/V-Carvalho/Organo-Alura",
           urlDeploy: "https://organo.up.railway.app/",
           details: ["Gerenciamento de Equipes"],
         },
         {
-          index: 4,
+          index: 7,
           title: "• See Monitoramento",
           conclusionYear: "",
           urlCover:
