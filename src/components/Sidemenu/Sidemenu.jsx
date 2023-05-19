@@ -10,16 +10,19 @@ import { SidemenuContext } from "../../contexts/SidemenuContext";
 const StyledSidemenu = styled.aside`
   width: 220px;
   padding: 0px 4px;
-  margin-bottom: 20px;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 20px);
   display: ${(props) => props.display};
   border-right: thin solid ${(props) => props.borderColor};
+
+  @media (max-width: 1024px) {
+    width: 145px;
+    padding: 0px;  
+  }
 `;
 
 const TitleSidemenu = styled.p`
-  /* font-size:  */
   width: 100%;
   height: 35px;
   display: flex;
@@ -47,7 +50,6 @@ const HeaderFolder = styled.div`
 `;
 
 const TitleFolder = styled.p`
-  /* font-size:  */
   width: 100%;
   display: flex;
   cursor: pointer;
