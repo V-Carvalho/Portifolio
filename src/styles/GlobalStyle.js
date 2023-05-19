@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-//TODO: importar use theme aqui
-
 export const GlobalStyle = createGlobalStyle`
 * {
     margin: 0;
@@ -16,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => props.theme.primaryColor};
   }
     
-  #root {
+  #root {    
     display: flex;
     flex-direction: row;
   }
