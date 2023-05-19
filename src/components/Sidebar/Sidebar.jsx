@@ -11,10 +11,14 @@ const StyledSidebar = styled.aside`
   display: flex;
   min-width: 50px;
   padding: 25px 2px;
-  margin-bottom: 20px;
   flex-direction: column;
-  height: calc(100vh -30px);
+  height: calc(100vh - 20px);
   border-right: thin solid ${(props) => props.borderColor};
+
+  @media (max-width: 1024px) {
+    min-width: 40px;
+    padding: 10px 2px;
+  }
 `;
 
 const BodySidebar = styled.div`
@@ -22,6 +26,10 @@ const BodySidebar = styled.div`
   gap: 25px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 320px) {
+    gap: 10px;
+  }
 `;
 
 const FooterSidebar = styled.div`
