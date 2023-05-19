@@ -7,9 +7,9 @@ import profilePicture from '../../assets/images/profile.png';
 import Footer from "../../components/Footer/Footer";
 
 const Main = styled.main`
-  flex: 1;
-  height: 100vh;
+  width: 100%;
   display: flex;
+  height: 100vh;
   flex-direction: column;
 `;
 
@@ -25,7 +25,9 @@ const ContentMain = styled.section`
   justify-content: center;
   background-color: ${(props) => props.backgroundColor};
 
-
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse; 
+  }
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -52,20 +54,28 @@ const ContainerPersonalData = styled.div`
 
 const Name = styled.p`
   display: flex;
-  font-size: 35px;
   font-weight: bold;
+  font-size: clamp(1rem, 2rem + 1vw, 1.5rem);
   color: ${(props) => props.textColor};
+
+  @media (max-width: 768px) {
+    font-weight: normal;
+  }
 `;
 
 const Profession = styled.p`
   display: flex;
-  font-size: 15px;
   color: ${(props) => props.textColor};
+  font-size: clamp(1rem, 0rem + 1vw, 1.5rem);
 `;
 
 const SocialMedia = styled.div`
-  gap: 25px;
+  gap: 20px;
   display: flex;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
 
 const ContainerPersonalPhoto = styled.div`
@@ -80,6 +90,11 @@ const PersonalPhoto = styled.img`
   display: flex;
   object-fit: cover;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150x;
+  }
 `;
 
 const Home = () => {

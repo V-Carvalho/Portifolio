@@ -7,7 +7,7 @@ import Topic from "../../components/Topic/Topic";
 import Footer from "../../components/Footer/Footer";
 
 const Main = styled.main`
-  flex: 1;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,9 +20,13 @@ const ContentMain = styled.section`
   padding: 0px 50px;
   overflow-x: hidden;
   margin-bottom: 20px;
-  align-items: center;
+  align-items: center;  
   flex-direction: column;
   background-color: ${(props) => props.backgroundColor};
+
+  @media (max-width: 1024px) {    
+    padding: 0px 20px; 
+  }
 
   &::-webkit-scrollbar {
     width: 10px;
