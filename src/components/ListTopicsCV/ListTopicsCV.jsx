@@ -23,11 +23,11 @@ const Tab = styled.li`
 `;
 
 const TabName = styled.p`
-  /* font-size:  */
   display: flex;
   cursor: pointer;
   margin: 0px 5px;
   color: ${(props) => props.textColor};
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
 `;
 
 const TabIconLeft = styled.div`
