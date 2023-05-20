@@ -12,13 +12,13 @@ export const aboutMe = () => {
       topics: [
         {
           index: 0,
-          title: "",
+          title: "• São Paulo - SP, Brasil",
           conclusionYear: "",
           urlCover: "",
           urlRepository: "",
           urlDeploy: "",
           details: [
-            "• Sou Vinicius Carvalho, um desenvolvedor front-end apaixonado por transformar ideias em realidade. Minha jornada como programador começou há alguns anos com modificações em Apps de terceiros, quando comecei a aprender por conta própria as habilidades necessárias para construir aplicações web e móveis. Desde então, venho aprimorando minhas habilidades em React e outras tecnologias, e transformando minhas ideias em projetos bem-sucedidos.",
+            "Sou Vinicius Carvalho, um desenvolvedor front-end apaixonado por transformar ideias em realidade. Minha jornada como programador começou há alguns anos com modificações em Apps de terceiros, quando comecei a aprender por conta própria as habilidades necessárias para construir aplicações web e móveis. Desde então, venho aprimorando minhas habilidades em React e outras tecnologias, e transformando minhas ideias em projetos bem-sucedidos.",
             "Apesar de não ter experiência formal no mercado, dediquei-me intensamente ao aprendizado e consegui dominar habilidades essenciais. Meus projetos pessoais e colaborativos são exemplos de minha capacidade de trabalhar de forma independente e em equipe, de identificar e resolver problemas e de construir soluções inovadoras.",
             "Busco oportunidades para contribuir com uma equipe comprometida em um ambiente de trabalho desafiador, para crescer profissionalmente e para continuar a aprimorar minhas habilidades. Meu objetivo é sempre entregar um trabalho de alta qualidade, com atenção aos detalhes e às necessidades do usuário, e construir produtos que gerem impacto positivo na vida das pessoas.",
           ],
@@ -34,7 +34,7 @@ export const formations = () => {
   return [
     {
       index: 0,
-      title: "Formação / Cursos",
+      title: "Formação",
       icon: <FaUserGraduate size={25} color={theme.iconPrimaryColor} />,
       topics: [
         {
