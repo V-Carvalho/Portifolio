@@ -9,6 +9,10 @@ const ContainerTopic = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: 20px 40px 0px 40px;
+
+  @media (max-width: 768px) {
+    margin: 10px 0px 0px 0px;
+  }
 `;
 
 const ContainerTitle = styled.div`
@@ -17,21 +21,25 @@ const ContainerTitle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-`;
-
-const Date = styled.p`
-  display: flex;
-  padding: 2px 8px;
-  border-radius: 8px;
-  color: ${(props) => props.textColor};
-  background-color: ${(props) => props.backgroundColorDate};
+  white-space: nowrap;
 `;
 
 const Title = styled.p`
   display: flex;
   font-weight: bold;
   padding-bottom: 4px;
+  white-space: nowrap;
   color: ${(props) => props.textColor};
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+`;
+
+const Date = styled.p`
+  display: flex;
+  padding: 3px 8px;
+  border-radius: 8px;
+  color: ${(props) => props.textColor};
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+  background-color: ${(props) => props.backgroundColorDate};
 `;
 
 const ContainerItems = styled.div`
@@ -41,19 +49,21 @@ const ContainerItems = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 0px 10px;  
 `;
 
 const Item = styled.p`
   display: flex;
+  text-align: justify;
   color: ${(props) => props.textColor};
+  font-size: clamp(0.8rem, 1vw, 1.5rem);  
 `;
 
 const CardProject = styled.div`
   gap: 5px;
   display: flex;
   flex-direction: column;
-  margin: 5px 0px 0px 10px;
+  margin: 5px 0px 0px 10px;  
 `;
 
 const ImgProject = styled.img`
@@ -61,12 +71,21 @@ const ImgProject = styled.img`
   height: 250px;
   display: flex;
   border-radius: 5px;
+
+  @media (max-width: 768px) {
+    width: 270px;
+    height: 150px;  
+  }
 `;
 
 const ContainerBtnShowProject = styled.div`
   gap: 25px;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    gap: 10px; 
+  }
 `;
 
 const BtnShowProject = styled.a`
@@ -80,6 +99,7 @@ const BtnShowProject = styled.a`
   justify-content: center;
   color: ${(props) => props.textColor};
   border: thin solid ${(props) => props.borderColor};
+  font-size: clamp(0.8rem, 1vw, 1.5rem);  
 
   &:hover {
     transform: scale(1.1);
