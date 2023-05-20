@@ -113,10 +113,10 @@ export const linksSidebar = () => {
       {
         index: 7,
         title: "Download Currículo",
-        url: "",
+        url: "https://drive.google.com/uc?export=download&id=1gAvx5GiDjgoIq7FJBbxLQVBdaQBl81vV",
         target: "_blank",
         icon: <BsFileEarmarkArrowDownFill size={25} color={theme.iconPrimaryColor} />,
-      },
+      },      
     ],
     [
       {
