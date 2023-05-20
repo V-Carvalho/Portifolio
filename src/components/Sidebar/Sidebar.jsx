@@ -27,7 +27,7 @@ const BodySidebar = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 320px) {
     gap: 10px;
   }
 `;
@@ -38,7 +38,7 @@ const FooterSidebar = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 320px) {
     gap: 10px;
   }
 `;
